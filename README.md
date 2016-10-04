@@ -11,7 +11,7 @@ In addition CPS does **not require host infomration** (it destination, source it
 
 ##Install:
 ```
-./install.sh
+sh install.sh
 ```
 
 ##Usage:
@@ -47,5 +47,5 @@ optional arguments:
 
 ##Unstall:
 ```
-./uninstall.sh
+sh uninstall.sh
 ```
