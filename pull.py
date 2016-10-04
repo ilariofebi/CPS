@@ -141,7 +141,7 @@ try:
     ## Sending file metainfo (json metainfo)
     time.sleep(1)
     c.connect((ip_server, shot_port))
-    c.sendall(json.dumps(info))
+    c.sendall(json.dumps(info).ljust(1024))
 
     ## Phase 3
     # Sending file
