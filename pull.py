@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 '''
   This file is part of Clay Pigeon Shooting
@@ -37,7 +37,7 @@ bc_port = 50000  # broadcast port
 def comment(comment, talk):
     global talkative
     if (talkative >= talk):
-        print (comment)
+        print(comment)
 
 
 def make_tarfile(source_dir):
@@ -66,9 +66,10 @@ else:
     try:
         import argparse
     except ImportError:
-        print "Module argparse missed"
-        print "sudo pip install argparse"
-        print "or use %s fileanme" % sys.argv[0]
+        print("Module argparse missed")
+        print("sudo pip install argparse")
+        print(("or use %s fileanme" % sys.argv[0]))
+
         sys.exit(1)
 
     parser = argparse.ArgumentParser(description='Puller')
@@ -141,7 +142,7 @@ try:
     ## Sending file metainfo (json metainfo)
     time.sleep(1)
     c.connect((ip_server, shot_port))
-    c.sendall(json.dumps(info).ljust(1024))
+    c.sendall(json.dumps(info).ljust(1024).encode('ascii'))
 
     ## Phase 3
     # Sending file

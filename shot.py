@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 '''
   This file is part of Clay Pigeon Shooting
@@ -30,14 +30,14 @@ import os
 shot_port = random.randrange(19000, 19999)
 bc_port = 50000
 
-print "Shot!"
+print("Shot!")
 try:
     ## Phase 1
     ## Send shot_port by broadcast
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     s.bind(('', 0))
     s.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
-    s.sendto(str(shot_port), ('<broadcast>', bc_port))
+    s.sendto(str(shot_port).encode('ascii'), ('<broadcast>', bc_port))
     s.close()
 
     ## Phase 2
@@ -49,8 +49,8 @@ try:
     sc, address = sh.accept()
 
     ## Receive file metainfo (json format)
-    json_info = sc.recv(1024)
-    info = json.loads(json_info)
+    json_info = sc.recv(1024).decode('ascii')
+    info = json.loads(str(json_info))
     filename = info['filename'] + '.shot'
 
     ## Phase 3
@@ -87,6 +87,6 @@ try:
         #this file do not exist
         os.rename(filename, info['filename'])
 
-    print "\nHit!!"
+    print("\n%s Hit!!" % info['filename'])
 except:
     print ("We made some mistakes by cooking the pigeon :( ")
