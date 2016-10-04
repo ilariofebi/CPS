@@ -10,9 +10,8 @@ In addition CPS does **not require host infomration** (it destination, source it
 (on small networks) **without using passwords** (raw socket keep opened for few seconds)
 
 ##Install:
-```bash
-mv pull.py /usr/local/bin/pull
-mv shot.py /usr/local/bin/shot
+```
+./install.sh
 ```
 
 ##Usage:
@@ -44,4 +43,9 @@ optional arguments:
   --gravity {zero,moon,earth,sun}, -g {zero,moon,earth,sun}
                         More gravity means shorter firing times
                         In case of zero gravity, pigeon will keep flying, in case of sun gravity you will have only a second to shoot
+```
+
+##Unstall:
+```
+./uninstall.sh
 ```
