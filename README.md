@@ -1,13 +1,13 @@
 # CPS
-Clay Pigeon Shooting is the simplest way to transfering file or directory between hosts on a lan.
+Clay Pigeon Shooting is the **simplest way to transfering file or directory between hosts on a lan**.
 
-CPS has been designed to operate in virtual networks as lxcbr (Linux containers) or in Docker containers networking, but it can work on any LAN.
+CPS has been designed to operate in virtual networks as **lxcbr** (Linux containers) or in **Docker containers networking**, but it can work on any LAN.
 
-CPS uses only Python standard libraries and does not use any transport protocol (http or ftp). 
-CPS operates by using only raw sockets to maximize the performance of sending.
+CPS uses only **Python standard libraries** and does not use any transport protocol (http or ftp). 
+CPS operates by using only raw sockets to **maximize the performance of transfert**.
 
-In addition CPS does not require host (it destination, source it) using a broadcast packets and ensures security 
-(on small networks) without using passwords (raw socket keep opened for few seconds)
+In addition CPS does **not require host infomration** (it destination, source it) using a broadcast packets and ensures security 
+(on small networks) **without using passwords** (raw socket keep opened for few seconds)
 
 ##Install:
 ```bash
