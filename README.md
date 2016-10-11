@@ -49,3 +49,6 @@ optional arguments:
 ```
 sh uninstall.sh
 ```
+
+##Video Example:
+[![CPS](http://img.youtube.com/vi/EQBo8qqyDhc/0.jpg)](http://www.youtube.com/watch?v=EQBo8qqyDhc)
